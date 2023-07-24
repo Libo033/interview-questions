@@ -15,8 +15,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       if (js_question.length === 0) {
         throw new Error("Doesn't exist this ID")
       }
+
+      const js = js_question[0]
   
-      return res.status(200).json({ js_question });
+      return res.status(200).json({ js });
     } catch (error: any) {
       return res.status(202).json({ error: error.message })
     }
