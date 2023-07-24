@@ -41,24 +41,28 @@ export default async function handler(
 
       const updated_question = await db
         .collection("javascript")
-        .updateOne(
-          { _id: new ObjectId(id) },
-          { $set: put_question }
-        );
+        .updateOne({ _id: new ObjectId(id) }, { $set: put_question });
 
-      return res
-        .status(200)
-        .json({
-          status: "successful",
-          _id: id,
-          question: put_question.question,
-          answer: put_question.answer,
-        });
+      return res.status(200).json({
+        status: "successful",
+        _id: id,
+        question: put_question.question,
+        answer: put_question.answer,
+      });
     } catch (error: any) {
       return res.status(400).json({ error: error.message });
     }
   }
   if (req.method === "DELETE") {
-
+    try {
+      const client = await clientPromise;
+      const db = client.db("interview_questions");
+  
+      const deleted_question = await db.collection("javascript").deleteOne({ _id: new ObjectId(id) });
+  
+      return res.status(200).json({ deleted: deleted_question.acknowledged });
+    } catch (error: any) {
+      return res.status(500).json({ error: error.message })
+    }
   }
 }
