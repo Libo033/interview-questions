@@ -19,6 +19,12 @@
   margin-top: 2.1rem;
 }
 
+.formLabelBoxLogin {
+  display: flex;
+  flex-direction: column;
+  margin-inline: 18rem;
+}
+
 .formLabelBox {
   display: flex;
   flex-direction: column;
@@ -149,6 +155,12 @@
     margin-top: 1.8rem;
   }
 
+  .formLabelBoxLogin {
+    display: flex;
+    flex-direction: column;
+    margin-inline: 15rem;
+  }
+
   .formLabelBox {
     margin-inline: 1.2rem;
   }
@@ -176,6 +188,12 @@
   /*#region FORM */
   .createForm {
     width: 96%;
+  }
+
+  .formLabelBoxLogin {
+    display: flex;
+    flex-direction: column;
+    margin-inline: 3rem;
   }
 
   .formTitle {
