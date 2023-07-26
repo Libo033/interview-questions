@@ -1,6 +1,7 @@
+import { IForm } from '@/libs/interfaces'
 import React from 'react'
 
-const UpdateForm = () => {
+const UpdateForm: React.FC<IForm> = () => {
   return (
     <div>UpdateForm</div>
   )

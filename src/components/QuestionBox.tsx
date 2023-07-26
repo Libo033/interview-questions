@@ -1,6 +1,7 @@
+import { IQuestionBox } from '@/libs/interfaces'
 import React from 'react'
 
-const QuestionBox = () => {
+const QuestionBox: React.FC<IQuestionBox> = () => {
   return (
     <div>QuestionBox</div>
   )
