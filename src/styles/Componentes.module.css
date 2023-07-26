@@ -1,0 +1,114 @@
+/*#region FORM */
+.createForm {
+  width: 72%;
+  height: fit-content;
+  margin-bottom: 3rem;
+}
+
+.formTitle {
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+  padding-block: 1.2rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-top: 2.1rem;
+}
+
+.formLabelBox {
+  display: flex;
+  flex-direction: column;
+  margin-inline: 1.2rem;
+}
+
+.formLabel {
+  margin-bottom: 3px;
+}
+
+.fromInput {
+  border: 1px solid rgb(220, 220, 220);
+  border-radius: 6px;
+  padding-inline: 6px;
+  padding-block: 3px;
+  outline: none;
+  font-size: 15px;
+}
+
+.fromInput:focus {
+  outline: auto;
+  outline-color: rgb(200, 200, 200);
+}
+
+.formTextArea {
+  border: 1px solid rgb(220, 220, 220);
+  border-radius: 6px;
+  padding-inline: 6px;
+  padding-block: 3px;
+  outline: none;
+  resize: none;
+  font-size: 15px;
+}
+
+.formTextArea:focus {
+  outline: auto;
+  outline-color: rgb(200, 200, 200);
+}
+
+.formButton {
+  transition: 90ms ease-in-out;
+  width: 30%;
+  border: 1px solid black;
+  border-radius: 6px;
+  align-self: center;
+  padding-block: 0.45rem;
+  background-color: white;
+  cursor: pointer;
+}
+
+.formButton:hover {
+  transition: 90ms ease-in-out;
+  transform: translate(-1px);
+  -webkit-box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.21);
+  -moz-box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.21);
+  box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.21);
+}
+/*#endregion */
+
+@media (min-width: 640px) and (max-width: 1024px) and (orientation: landscape) { /* TELEFONOS EN HORIZONTAL */
+  /*#region FORM */
+  .createForm {
+    width: 99%;
+    height: fit-content;
+    margin-bottom: 1.8rem;
+  }
+  
+  .formTitle {
+    padding-block: 1.8rem;
+  }
+  
+  .form {
+    gap: 1.5rem;
+    margin-top: 1.8rem;
+  }
+  
+  .formLabelBox {
+    margin-inline: 1.2rem;
+  }
+  /*#endregion */
+}
+
+@media (min-width: 320px) and (max-width: 768px) {  /* TELEFONOS EN VERTICAL */
+  /*#region FORM */
+  .createForm {
+    width: 96%;
+  }
+
+  .formTitle {
+    font-size: 27px;
+  }
+  /*#endregion */
+}

@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.pagina {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 640px) and (max-width: 1024px) and (orientation: landscape) { /* TELEFONOS EN HORIZONTAL */
+  .pagina {
+    width: 100%;
+    height: fit-content;
+    overflow-y: scroll;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 768px) and (orientation: portrait) {  /* TELEFONOS EN VERTICAL */
+  .pagina {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
