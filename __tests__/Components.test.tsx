@@ -37,7 +37,7 @@ describe("COMPONENTES", () => {
       render(<Footer theme={"ligth"} />);
 
       expect(
-        screen.getByRole("img", { name: /linkedin/i })
+        screen.getByRole("link", { name: /mi linkedin/i })
       ).toBeInTheDocument();
       expect(
         screen.getByRole("link", { name: /mi portfolio/i })
