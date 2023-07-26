@@ -107,34 +107,72 @@
 }
 
 .footerLink:hover {
-  text-decoration: underline  ;
+  text-decoration: underline;
 }
 /*#endregion */
 
-@media (min-width: 640px) and (max-width: 1024px) and (orientation: landscape) { /* TELEFONOS EN HORIZONTAL */
+/*#region QUESTIONBOX */
+.questionBox {
+  width: 100%;
+  padding-inline: 8.1rem;
+  padding-block: 2.7rem;
+}
+
+.question {
+  margin-bottom: 0.9rem;
+  font-size: 24px;
+  font-weight: 600;
+  color: black;
+}
+
+.answer {
+  font-size: 18px;
+  color: black;
+}
+/*#endregion*/
+
+@media (min-width: 640px) and (max-width: 1024px) and (orientation: landscape) {
+  /* TELEFONOS EN HORIZONTAL */
   /*#region FORM */
   .createForm {
     width: 99%;
     height: fit-content;
     margin-bottom: 1.8rem;
   }
-  
+
   .formTitle {
     padding-block: 1.8rem;
   }
-  
+
   .form {
     gap: 1.5rem;
     margin-top: 1.8rem;
   }
-  
+
   .formLabelBox {
     margin-inline: 1.2rem;
   }
   /*#endregion */
+
+  /*#region QUESTIONBOX */
+  .questionBox {
+    padding-inline: 2.7rem;
+    padding-block: 1.8rem;
+  }
+
+  .question {
+    font-size: 21px;
+  }
+
+  .answer {
+    font-size: 15px;
+  }
+  /*#endregion*/
+
 }
 
-@media (min-width: 320px) and (max-width: 768px) {  /* TELEFONOS EN VERTICAL */
+@media (min-width: 320px) and (max-width: 768px) {
+  /* TELEFONOS EN VERTICAL */
   /*#region FORM */
   .createForm {
     width: 96%;
@@ -146,18 +184,33 @@
   /*#endregion */
 
   /*#region FOOTER */
-.footer {
-  width: 100%;
-  height: 5.1rem;
-}
+  .footer {
+    width: 100%;
+    height: 5.1rem;
+  }
 
-.footerTitle {
-  font-size: 18px;
-}
+  .footerTitle {
+    font-size: 18px;
+  }
 
-.footerSocial {
-  width: 33%;
-  flex-direction: column;
-}
-/*#endregion */
+  .footerSocial {
+    width: 33%;
+    flex-direction: column;
+  }
+  /*#endregion */
+
+  /*#region QUESTIONBOX */
+  .questionBox {
+    padding-inline: 1.5rem;
+    padding-block: 1.8rem;
+  }
+
+  .question {
+    font-size: 21px;
+  }
+
+  .answer {
+    font-size: 15px;
+  }
+  /*#endregion*/
 }
