@@ -86,7 +86,7 @@ describe("COMPONENTES", () => {
 
       expect(pushed).toHaveBeenCalledWith("/javascript", "/javascript", {
         locale: undefined,
-        scroll: undefined,
+        scroll: true,
         shallow: undefined,
       });
     });
@@ -105,7 +105,7 @@ describe("COMPONENTES", () => {
 
       expect(pushed).toHaveBeenCalledWith("/react", "/react", {
         locale: undefined,
-        scroll: undefined,
+        scroll: true,
         shallow: undefined,
       });
     });
@@ -124,7 +124,7 @@ describe("COMPONENTES", () => {
 
       expect(pushed).toHaveBeenCalledWith("/typescript", "/typescript", {
         locale: undefined,
-        scroll: undefined,
+        scroll: true,
         shallow: undefined,
       });
     });
