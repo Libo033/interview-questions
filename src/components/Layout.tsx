@@ -15,11 +15,11 @@ const Layout: React.FC<ILayoutProps> = ( props ) => {
       <Head>
         <title>{title}</title>
       </Head>
-      <body className={inter.className}>
+      <div className={inter.className}>
         <Navbar theme={'ligth'} />
         {props.children}
         <Footer theme={'ligth'} />
-      </body>
+      </div>
     </>
   )
 }
