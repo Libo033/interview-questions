@@ -165,7 +165,7 @@ describe("COMPONENTES", () => {
       const router = createMockRouter({ pathname: "/" });
       render(
         <RouterContext.Provider value={router}>
-          <IDrawer theme={"ligth"} />
+          <Navbar theme={"ligth"} />
         </RouterContext.Provider>
       );
 
@@ -175,7 +175,7 @@ describe("COMPONENTES", () => {
 
       expect(pushed).toHaveBeenCalledWith("/javascript", "/javascript", {
         locale: undefined,
-        scroll: undefined,
+        scroll: true,
         shallow: undefined,
       });
     });
@@ -184,7 +184,7 @@ describe("COMPONENTES", () => {
       const router = createMockRouter({ pathname: "/" });
       render(
         <RouterContext.Provider value={router}>
-          <IDrawer theme={"ligth"} />
+          <Navbar theme={"ligth"} />
         </RouterContext.Provider>
       );
 
@@ -194,7 +194,7 @@ describe("COMPONENTES", () => {
 
       expect(pushed).toHaveBeenCalledWith("/react", "/react", {
         locale: undefined,
-        scroll: undefined,
+        scroll: true,
         shallow: undefined,
       });
     });
@@ -203,7 +203,7 @@ describe("COMPONENTES", () => {
       const router = createMockRouter({ pathname: "/" });
       render(
         <RouterContext.Provider value={router}>
-          <IDrawer theme={"ligth"} />
+          <Navbar theme={"ligth"} />
         </RouterContext.Provider>
       );
 
@@ -213,7 +213,7 @@ describe("COMPONENTES", () => {
 
       expect(pushed).toHaveBeenCalledWith("/typescript", "/typescript", {
         locale: undefined,
-        scroll: undefined,
+        scroll: true,
         shallow: undefined,
       });
     });

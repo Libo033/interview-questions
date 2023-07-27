@@ -137,6 +137,56 @@
 }
 /*#endregion*/
 
+/*#region NAVBAR */
+.navbar {
+  width: 100%;
+  height: 10vh;
+  border-bottom: 1px solid gainsboro;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logoContainer {
+  width: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: underline;
+  text-decoration-color: black;
+}
+
+.logo {
+  color: black;
+}
+
+.nextLinkContainer {
+  width: 39%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.nextLink {
+  transition: 0.2s ease;
+  transform: translate3d(-29px);
+  color: rgb(9, 9, 9);
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 3px;
+  padding-inline: 12px;
+  padding-block: 6px;
+}
+
+.nextLink:hover {
+  transition: 0.2s ease;
+  background-color: rgb(221, 221, 221);
+}
+
+.menuContainer {
+  display: none;
+}
+/*#endregion */
+
 @media (min-width: 640px) and (max-width: 1024px) and (orientation: landscape) {
   /* TELEFONOS EN HORIZONTAL */
   /*#region FORM */
@@ -181,6 +231,11 @@
   }
   /*#endregion*/
 
+  /*#region NAVBAR */
+  .navbar {
+    height: 18vh;
+  }
+  /*#endregion */
 }
 
 @media (min-width: 320px) and (max-width: 768px) {
@@ -231,4 +286,35 @@
     font-size: 15px;
   }
   /*#endregion*/
+
+  /*#region NAVBAR */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logoContainer {
+    width: 33%;
+  }
+
+  .logo {
+    color: black;
+  }
+
+  .nextLinkContainer {
+    display: none;
+  }
+
+  .menuContainer {
+    width: 27%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menu {
+    cursor: pointer;
+  }
+  /*#endregion */
 }
