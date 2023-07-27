@@ -1,3 +1,5 @@
+import React from 'react'
+
 export type TypeTheme = {
   theme: "ligth" | "dark";
 }
@@ -12,4 +14,9 @@ export interface IQuestionBox {
   question: string;
   answer: string;
   num: number;
+}
+
+export interface ILayoutProps {
+  children: React.ReactNode;
+  title: string;
 }

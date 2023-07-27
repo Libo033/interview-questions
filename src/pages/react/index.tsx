@@ -1,8 +1,13 @@
+import Layout from '@/components/Layout'
 import React from 'react'
 
 const ReactP = () => {
   return (
-    <div>ReactP</div>
+    <Layout title='React'>
+      <div>
+        
+      </div>
+    </Layout>
   )
 }
 

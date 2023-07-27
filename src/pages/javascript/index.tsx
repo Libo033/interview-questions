@@ -1,8 +1,13 @@
+import Layout from '@/components/Layout'
 import React from 'react'
 
 const Javascript = () => {
   return (
-    <div>Javascript</div>
+    <Layout title='JavaScript'>
+      <div>
+        
+      </div>
+    </Layout>
   )
 }
 

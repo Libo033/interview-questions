@@ -1,13 +1,13 @@
-import { Inter } from "next/font/google";
+import Layout from "@/components/Layout";
 import styles from "@/styles/Home.module.css";
 import React from "react";
 
-const inter = Inter({ subsets: ["latin"] });
-
 export default function Home() {
   return (
-    <div className={inter.className + " pagina"}>
+    <Layout title={"Inicio"}>
+      <div>
 
-    </div>
+      </div>
+    </Layout>
   );
 }

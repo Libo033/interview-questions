@@ -1,8 +1,13 @@
+import Layout from '@/components/Layout'
 import React from 'react'
 
 const Typescript = () => {
   return (
-    <div>Typescript</div>
+    <Layout title='TypeScript'>
+      <div>
+
+      </div>
+    </Layout>
   )
 }
 
