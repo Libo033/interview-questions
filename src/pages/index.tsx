@@ -35,7 +35,7 @@ export default function Home() {
             height={120}
           />
         </div>
-        <Divider style={{borderColor: "#73B4C351"}} />
+        <Divider className={styles.divider} />
         <div className={styles.container}>
           <div className={styles.destacadas}>
             <p className={styles.titleQuestion}>

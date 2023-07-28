@@ -1,3 +1,35 @@
+/*
+  #EDE9EF
+  #73B4C3
+  #509A5B
+  #
+  #162D23
+*/
+
+:root {
+  --invert: invert(0%);
+  --backgroundNav: #EDE9EF;
+  --borderNav: gainsboro;
+  --foregroundNav: black;
+  --secondaryNav: #73B4C345;
+  --background: #EDE9EF;
+  --foreground: #162D23;
+  --chip: #73b4c3;
+  --divider: #73b4c360;
+}
+
+[data-theme='dark'] {
+  --invert: invert(100%);
+  --backgroundNav: #151515;
+  --borderNav: black;
+  --foregroundNav: #F9F9F9;
+  --secondaryNav: #509A5B60;
+  --background: #303030;
+  --foreground: #F9F9F9;
+  --chip: #509A5B;
+  --divider: #509a5b60;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;

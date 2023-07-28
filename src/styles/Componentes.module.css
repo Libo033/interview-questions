@@ -88,11 +88,11 @@
 .footer {
   width: 100%;
   height: 10vh;
-  border-top: 1px solid gainsboro;
+  border-top: 1px solid var(--borderNav);
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #EDE9EF;
+  background-color: var(--backgroundNav);
 }
 
 .footerTitle {
@@ -110,7 +110,7 @@
 
 .footerLink {
   text-decoration: none;
-  color: black;
+  color: var(--foregroundNav);
 }
 
 .footerLink:hover {
@@ -142,12 +142,12 @@
 .navbar {
   width: 100%;
   height: 10vh;
-  border-bottom: 1px solid gainsboro;
+  border-bottom: 1px solid var(--borderNav);
   display: flex;
   position: fixed;
   justify-content: space-between;
   align-items: center;
-  background-color: #EDE9EF;
+  background-color: var(--backgroundNav);
 }
 
 .logoContainer {
@@ -156,11 +156,11 @@
   align-items: center;
   justify-content: center;
   text-decoration: underline;
-  text-decoration-color: black;
+  text-decoration-color: var(--foregroundNav);
 }
 
 .logo {
-  color: black;
+  color: var(--foregroundNav);
 }
 
 .nextLinkContainer {
@@ -172,7 +172,7 @@
 .nextLink {
   transition: 0.2s ease;
   transform: translate3d(-29px);
-  color: rgb(9, 9, 9);
+  color: var(--foregroundNav);
   text-decoration: none;
   font-weight: 600;
   border-radius: 3px;
@@ -182,11 +182,22 @@
 
 .nextLink:hover {
   transition: 0.2s ease;
-  background-color: #73B4C345;
+  background-color: var(--secondaryNav);
 }
 
 .menuContainer {
   display: none;
+}
+
+.themeButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid gray;
+  border-radius: 60px;
+  padding: 6px;
+  cursor: pointer;
+  background-color: whitesmoke;
 }
 /*#endregion */
 
@@ -196,9 +207,12 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
+  background-color: var(--backgroundNav);
+  padding-inline: 2.1rem;
 }
 
 .drawerTitle {
+  color: var(--foreground);
   height: 15%;
   font-size: 2.1em;
   text-decoration: underline;
@@ -218,7 +232,7 @@
 .drawerLink {
   width: 50%;
   text-align: start;
-  color: black;
+  color: var(--foreground);
   text-decoration: none;
   font-weight: 600;
   font-size: 1.2em;
@@ -335,10 +349,6 @@
     width: 33%;
   }
 
-  .logo {
-    color: black;
-  }
-
   .nextLinkContainer {
     display: none;
   }
@@ -352,6 +362,7 @@
 
   .menu {
     cursor: pointer;
+    filter: var(--invert);
   }
   /*#endregion */
 }
