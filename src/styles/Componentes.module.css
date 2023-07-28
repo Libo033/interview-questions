@@ -67,20 +67,20 @@
 .formButton {
   transition: 90ms ease-in-out;
   width: 30%;
-  border: 1px solid black;
+  border: 1px solid var(--foreground);
   border-radius: 6px;
   align-self: center;
   padding-block: 0.45rem;
-  background-color: white;
+  background-color: var(--background);
   cursor: pointer;
 }
 
 .formButton:hover {
   transition: 90ms ease-in-out;
   transform: translate(-1px);
-  -webkit-box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.21);
-  -moz-box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.21);
-  box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.21);
+  -webkit-box-shadow: 3px 3px 0px 0px var(--shadow);
+  -moz-box-shadow: 3px 3px 0px 0px var(--shadow);
+  box-shadow: 3px 3px 0px 0px var(--shadow);
 }
 /*#endregion */
 

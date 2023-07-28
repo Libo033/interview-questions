@@ -1,7 +1,7 @@
 import React from 'react'
 
 export type TypeTheme = {
-  theme: "ligth" | "dark";
+  theme: string;
 }
 
 export interface IForm {

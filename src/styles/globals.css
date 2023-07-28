@@ -16,6 +16,7 @@
   --foreground: #162D23;
   --chip: #73b4c3;
   --divider: #73b4c360;
+  --shadow: rgba(0, 0, 0, 0.21);
 }
 
 [data-theme='dark'] {
@@ -28,6 +29,7 @@
   --foreground: #F9F9F9;
   --chip: #509A5B;
   --divider: #509a5b60;
+  --shadow: rgba(255, 255, 255, 0.45);
 }
 
 * {
