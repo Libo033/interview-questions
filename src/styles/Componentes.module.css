@@ -87,11 +87,12 @@
 /*#region FOOTER */
 .footer {
   width: 100%;
-  height: 5.1rem;
+  height: 10vh;
   border-top: 1px solid gainsboro;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  background-color: #EDE9EF;
 }
 
 .footerTitle {
@@ -143,8 +144,10 @@
   height: 10vh;
   border-bottom: 1px solid gainsboro;
   display: flex;
+  position: fixed;
   justify-content: space-between;
   align-items: center;
+  background-color: #EDE9EF;
 }
 
 .logoContainer {
@@ -179,7 +182,7 @@
 
 .nextLink:hover {
   transition: 0.2s ease;
-  background-color: rgb(221, 221, 221);
+  background-color: #73B4C345;
 }
 
 .menuContainer {
@@ -294,7 +297,6 @@
   /*#region FOOTER */
   .footer {
     width: 100%;
-    height: 5.1rem;
   }
 
   .footerTitle {

@@ -1,0 +1,128 @@
+.page {
+  padding-inline: 7%;
+  background-color: #ede9ef60;
+}
+
+.title {
+  height: 21vh;
+  padding-top: 12vh;
+  color: #162d23;
+  font-size: 2.1em;
+  display: flex;
+  align-items: flex-end;
+}
+
+.description {
+  height: 24vh;
+  font-size: 1.2em;
+  text-align: justify;
+  color: #162d23;
+  display: flex;
+  align-items: center;
+}
+
+.langs {
+  height: 39vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.container {
+  margin-top: 4.5vh;
+  padding-block: 3vh;
+  height: fit-content;
+}
+
+.destacadas {
+  margin-bottom: 6vh;
+}
+
+.titleQuestion {
+  margin-bottom: 1.8vh;
+  color: #162d23;
+  font-weight: 600;
+}
+
+.chips {
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.chip {
+  padding-inline: 0.9rem;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.81em;
+  text-decoration: none;
+  border-radius: 15px;
+  border: 1px solid gainsboro;
+  color: #f9f9f9;
+  font-weight: 600;
+  background-color: #73b4c3;
+}
+
+@media (min-width: 640px) and (max-width: 1024px) and (orientation: landscape) {
+  .page {
+    padding-inline: 3%;
+  }
+  
+  .title {
+    height: 48vh;
+    padding-top: 18vh;
+  }
+
+  .langs img {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .description {
+    height: 45vh;
+  }
+  
+  .container {
+    margin-top: 9vh;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .page {
+    padding-inline: 6%;
+  }
+  
+  .langs {
+    height: 27vh;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .page {
+    padding-inline: 4.5%;
+  }
+
+  .title {
+    height: 33vh;
+  }
+
+  .description {
+    height: 39vh;
+  }
+
+  .langs {
+    height: 24vh;
+  }
+
+  .langs img {
+    width: 72px;
+    height: 72px;
+  }
+
+  .container {
+    margin-top: 3vh;
+    padding-block: 1.5vh;
+  }
+}
