@@ -29,7 +29,7 @@
   --foreground: #F9F9F9;
   --chip: #509A5B;
   --divider: #509a5b60;
-  --shadow: rgba(255, 255, 255, 0.45);
+  --shadow: rgba(255, 255, 255, 0.21);
 }
 
 * {
