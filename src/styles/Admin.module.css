@@ -5,6 +5,10 @@
   justify-content: center;
   align-items: center;
 }
+
+.linkDashboard {
+  color: var(--foreground);
+}
 /*#endregion */
 
 /*#region DASHBOARD */
@@ -69,7 +73,13 @@
 /*#endregion */
 
 /*#region CREATE */
-
+.Create {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 /*#endregion */
 
 /*#region UPDATE */

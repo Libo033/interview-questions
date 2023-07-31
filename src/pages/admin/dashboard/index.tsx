@@ -25,8 +25,8 @@ const Dashboard = () => {
               height={120}
             />
             <div className={styles.optionsBtnGroup}>
-              <button onClick={() => handleRoute("update", "javascript")}>MODIFICAR</button>
-              <button onClick={() => handleRoute("create", "javascript")}>CREAR</button>
+              <button onClick={() => handleRoute("update", "JavaScript")}>MODIFICAR</button>
+              <button onClick={() => handleRoute("create", "JavaScript")}>CREAR</button>
             </div>
           </article>
           <article className={styles.option}>
@@ -38,8 +38,8 @@ const Dashboard = () => {
               height={120}
             />
             <div className={styles.optionsBtnGroup}>
-              <button onClick={() => handleRoute("update", "react")}>MODIFICAR</button>
-              <button onClick={() => handleRoute("create", "react")}>CREAR</button>
+              <button onClick={() => handleRoute("update", "React")}>MODIFICAR</button>
+              <button onClick={() => handleRoute("create", "React")}>CREAR</button>
             </div>
           </article>
           <article className={styles.option}>
@@ -51,8 +51,8 @@ const Dashboard = () => {
               height={120}
             />
             <div className={styles.optionsBtnGroup}>
-              <button onClick={() => handleRoute("update", "typescript")}>MODIFICAR</button>
-              <button onClick={() => handleRoute("create", "typescript")}>CREAR</button>
+              <button onClick={() => handleRoute("update", "TypeScript")}>MODIFICAR</button>
+              <button onClick={() => handleRoute("create", "TypeScript")}>CREAR</button>
             </div>
           </article>
         </section>

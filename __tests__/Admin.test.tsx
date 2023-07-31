@@ -3,9 +3,10 @@ import userEvent from "@testing-library/user-event";
 import { RouterContext } from "next/dist/shared/lib/router-context";
 import { createMockRouter } from "../__mocks__/createMockRouter";
 import Dashboard from "@/pages/admin/dashboard";
+import Create from "@/pages/admin/dashboard/create";
 
-describe('ADMIN - ROUTES', () => {
-  describe('DASHBOARD', () => {
+describe("ADMIN - ROUTES", () => {
+  describe("DASHBOARD", () => {
     it("Deberia tener el titulo de 'dashboard'", () => {
       const router = createMockRouter({ pathname: "/admin/dashboard" });
       render(
@@ -14,7 +15,9 @@ describe('ADMIN - ROUTES', () => {
         </RouterContext.Provider>
       );
 
-      expect(screen.getByRole('heading', {  name: /dashboard/i})).toBeInTheDocument();
+      expect(
+        screen.getByRole("heading", { name: /dashboard/i })
+      ).toBeInTheDocument();
     });
 
     it("Deberia tener las imagenes y titulos de los lenguajes", () => {
@@ -25,9 +28,13 @@ describe('ADMIN - ROUTES', () => {
         </RouterContext.Provider>
       );
 
-      expect(screen.getByRole('img', {  name: /javascript/i})).toBeInTheDocument();
-      expect(screen.getByRole('img', {  name: /react/i})).toBeInTheDocument();
-      expect(screen.getByRole('img', {  name: /typescript/i})).toBeInTheDocument();
+      expect(
+        screen.getByRole("img", { name: /javascript/i })
+      ).toBeInTheDocument();
+      expect(screen.getByRole("img", { name: /react/i })).toBeInTheDocument();
+      expect(
+        screen.getByRole("img", { name: /typescript/i })
+      ).toBeInTheDocument();
     });
 
     it("Deberia estar los textos de crear y modificar", () => {
@@ -43,13 +50,52 @@ describe('ADMIN - ROUTES', () => {
     });
   });
 
-  describe('CREATE', () => {
+  describe("CREATE", () => {
+    it("Deberia tener el titulo de crear", () => {
+      const router = createMockRouter({
+        pathname: "/admin/dashboard/create?lang=JavaScript",
+      });
+      render(
+        <RouterContext.Provider value={router}>
+          <Create />
+        </RouterContext.Provider>
+      );
 
+      expect(
+        screen.getByText( /crear nueva pregunta de/i )
+      ).toBeInTheDocument();
+    });
+
+    it("Deberia tener en el titulo el lenguaje", () => {
+      const router = createMockRouter({
+        pathname: "/admin/dashboard/create?lang=TypeScript",
+      });
+      render(
+        <RouterContext.Provider value={router}>
+          <Create />
+        </RouterContext.Provider>
+      );
+
+      expect(
+        screen.getAllByText( /typescript/i )[0]
+      ).toBeInTheDocument();
+    });
+
+    it("Deberia tener un Link para volver hacia atras", () => {
+      const router = createMockRouter({
+        pathname: "/admin/dashboard/create?lang=JavaScript",
+      });
+      render(
+        <RouterContext.Provider value={router}>
+          <Create />
+        </RouterContext.Provider>
+      );
+
+      expect(screen.getByRole("link", { name: /volver al dashboard/i })).toBeInTheDocument();
+    });
   });
 
-  describe('UPDATE', () => {
-    
-  });
+  describe("UPDATE", () => {});
 });
 
 // it("", () => {});
