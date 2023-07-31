@@ -84,11 +84,25 @@
 /*#endregion */
 
 /*#region UPDATE */
-
+.Update {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 /*#endregion */
 
 @media (min-width: 640px) and (max-width: 1024px) and (orientation: landscape) {
   .Create {
+    padding-top: 24vh;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .Update {
     padding-top: 24vh;
     height: fit-content;
     display: flex;

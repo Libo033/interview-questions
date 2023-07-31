@@ -4,6 +4,7 @@ import { RouterContext } from "next/dist/shared/lib/router-context";
 import { createMockRouter } from "../__mocks__/createMockRouter";
 import Dashboard from "@/pages/admin/dashboard";
 import Create from "@/pages/admin/dashboard/create";
+import Update from "@/pages/admin/dashboard/update";
 
 describe("ADMIN - ROUTES", () => {
   describe("DASHBOARD", () => {
@@ -61,9 +62,7 @@ describe("ADMIN - ROUTES", () => {
         </RouterContext.Provider>
       );
 
-      expect(
-        screen.getByText( /crear nueva pregunta de/i )
-      ).toBeInTheDocument();
+      expect(screen.getByText(/crear nueva pregunta de/i)).toBeInTheDocument();
     });
 
     it("Deberia tener en el titulo el lenguaje", () => {
@@ -76,9 +75,7 @@ describe("ADMIN - ROUTES", () => {
         </RouterContext.Provider>
       );
 
-      expect(
-        screen.getAllByText( /typescript/i )[0]
-      ).toBeInTheDocument();
+      expect(screen.getAllByText(/typescript/i)[0]).toBeInTheDocument();
     });
 
     it("Deberia tener un Link para volver hacia atras", async () => {
@@ -91,21 +88,86 @@ describe("ADMIN - ROUTES", () => {
         </RouterContext.Provider>
       );
 
-      expect(screen.getByRole("link", { name: /volver al dashboard/i })).toBeInTheDocument();
+      expect(
+        screen.getByRole("link", { name: /volver al dashboard/i })
+      ).toBeInTheDocument();
 
-      await userEvent.click(screen.getByRole("link", { name: /volver al dashboard/i }));
+      await userEvent.click(
+        screen.getByRole("link", { name: /volver al dashboard/i })
+      );
 
       const pushed = router.push;
 
-      expect(pushed).toHaveBeenCalledWith("/admin/dashboard", "/admin/dashboard", {
-        locale: undefined,
-        scroll: true,
-        shallow: undefined,
-      });
+      expect(pushed).toHaveBeenCalledWith(
+        "/admin/dashboard",
+        "/admin/dashboard",
+        {
+          locale: undefined,
+          scroll: true,
+          shallow: undefined,
+        }
+      );
     });
   });
 
-  describe("UPDATE", () => {});
+  describe("UPDATE", () => {
+    it("Deberia tener el titulo de 'Modificar'", () => {
+      const router = createMockRouter({
+        pathname: "/admin/dashboard/update?lang=JavaScript",
+      });
+      render(
+        <RouterContext.Provider value={router}>
+          <Update />
+        </RouterContext.Provider>
+      );
+
+      expect(screen.getByText(/Modificar pregunta de/i)).toBeInTheDocument();
+    });
+
+    it("Deberia tener en el titulo el lenguaje", () => {
+      const router = createMockRouter({
+        pathname: "/admin/dashboard/update?lang=TypeScript",
+      });
+      render(
+        <RouterContext.Provider value={router}>
+          <Update />
+        </RouterContext.Provider>
+      );
+
+      expect(screen.getAllByText(/typescript/i)[0]).toBeInTheDocument();
+    });
+
+    it("Deberia tener un Link para volver hacia atras", async () => {
+      const router = createMockRouter({
+        pathname: "/admin/dashboard/create?lang=JavaScript",
+      });
+      render(
+        <RouterContext.Provider value={router}>
+          <Update />
+        </RouterContext.Provider>
+      );
+
+      expect(
+        screen.getByRole("link", { name: /volver al dashboard/i })
+      ).toBeInTheDocument();
+
+      await userEvent.click(
+        screen.getByRole("link", { name: /volver al dashboard/i })
+      );
+
+      const pushed = router.push;
+
+      expect(pushed).toHaveBeenCalledWith(
+        "/admin/dashboard",
+        "/admin/dashboard",
+        {
+          locale: undefined,
+          scroll: true,
+          shallow: undefined,
+        }
+      );
+    });
+  });
 });
 
 // it("", () => {});
