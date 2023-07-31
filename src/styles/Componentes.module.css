@@ -287,6 +287,10 @@
   .navbar {
     height: 18vh;
   }
+
+  .nextLinkContainer {
+    width: 54%;
+  }
   /*#endregion */
 }
 

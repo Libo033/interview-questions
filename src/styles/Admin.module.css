@@ -94,6 +94,26 @@
 /*#endregion */
 
 @media (min-width: 640px) and (max-width: 1024px) and (orientation: landscape) {
+  /*#region DASHBOARD */
+  .dashboard {
+    height: fit-content;
+    padding-top: 24vh;
+  }
+
+  .dashboardTitle {
+    font-size: 2.4em;
+  }
+
+  .container {
+    height: 114vh;
+  }
+  /*#endregion */
+
+  .linkDashboard {
+    color: var(--foreground);
+    font-size: 0.9em;
+  }
+
   .Create {
     padding-top: 24vh;
     height: fit-content;
