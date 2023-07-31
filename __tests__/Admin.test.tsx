@@ -81,7 +81,7 @@ describe("ADMIN - ROUTES", () => {
       ).toBeInTheDocument();
     });
 
-    it("Deberia tener un Link para volver hacia atras", () => {
+    it("Deberia tener un Link para volver hacia atras", async () => {
       const router = createMockRouter({
         pathname: "/admin/dashboard/create?lang=JavaScript",
       });
@@ -92,6 +92,16 @@ describe("ADMIN - ROUTES", () => {
       );
 
       expect(screen.getByRole("link", { name: /volver al dashboard/i })).toBeInTheDocument();
+
+      await userEvent.click(screen.getByRole("link", { name: /volver al dashboard/i }));
+
+      const pushed = router.push;
+
+      expect(pushed).toHaveBeenCalledWith("/admin/dashboard", "/admin/dashboard", {
+        locale: undefined,
+        scroll: true,
+        shallow: undefined,
+      });
     });
   });
 

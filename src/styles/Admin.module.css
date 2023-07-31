@@ -87,6 +87,20 @@
 
 /*#endregion */
 
+@media (min-width: 640px) and (max-width: 1024px) and (orientation: landscape) {
+  .Create {
+    padding-top: 24vh;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .linkDashboard {
+    margin-bottom: 2.1rem;
+  }
+}
+
 @media (min-width: 320px) and (max-width: 767px) and (orientation: portrait) {
   /*#region ADMIN */
   .page {
