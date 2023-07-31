@@ -26,8 +26,6 @@ const Javascript = () => {
     return () => controller.abort();
   }, []);
 
-  console.log(questions);
-
   return (
     <Layout title="JavaScript">
       <div className={styles.page}>
