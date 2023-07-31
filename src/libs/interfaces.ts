@@ -6,7 +6,7 @@ export type TypeTheme = {
 
 export interface IForm {
   theme: "ligth" | "dark";
-  lang: "JavaScript" | "React" | "TypeScript";
+  lang: string;
 }
 
 export interface IQuestionBox {
