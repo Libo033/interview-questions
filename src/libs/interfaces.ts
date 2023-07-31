@@ -20,3 +20,9 @@ export interface ILayoutProps {
   children: React.ReactNode;
   title: string;
 }
+
+export interface IQuestion {
+  _id: string;
+  answer: string;
+  question: string;
+}

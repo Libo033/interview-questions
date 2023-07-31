@@ -1,0 +1,38 @@
+.page {
+  padding-top: 10vh;
+  padding-inline: 5.1rem;
+  min-height: 90vh;
+  max-height: fit-content;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 2.4em;
+  font-weight: 500;
+  padding-top: 2.1rem;
+  padding-bottom: 0.6rem;
+  padding-inline: 0.9rem;
+}
+
+.questions {
+  margin-block: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 640px) and (max-width: 1024px) and (orientation: landscape) {
+  
+}
+
+@media (min-width: 320px) and (max-width: 768px) and (orientation: portrait) {
+  .page {
+    padding-inline: 0.6rem;
+  }
+
+  .title {
+    font-size: 2.1em;
+    font-weight: 500;
+    padding-inline: 0.45rem;
+  }
+}
