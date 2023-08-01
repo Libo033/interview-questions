@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import styles from "@/styles/Questions.module.css";
 import QuestionBox from "@/components/QuestionBox";
 import { IQuestion } from "@/libs/interfaces";
-import { Divider } from "@mui/material";
+import { CircularProgress, Divider } from "@mui/material";
 
 const Typescript = () => {
   const [questions, setQuestions] = useState<IQuestion[]>([]);
@@ -42,6 +42,11 @@ const Typescript = () => {
                 num={index + 1}
               />
             ))}
+          {questions.length === 0 && (
+            <div className={styles.loaderContainer}>
+              <CircularProgress color="inherit" />
+            </div>
+          )}
         </div>
       </div>
     </Layout>

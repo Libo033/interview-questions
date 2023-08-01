@@ -3,12 +3,12 @@ import React, { useEffect, useState } from "react";
 import styles from "@/styles/Questions.module.css";
 import QuestionBox from "@/components/QuestionBox";
 import { IQuestion } from "@/libs/interfaces";
-import { Divider } from "@mui/material";
+import { CircularProgress, Divider } from "@mui/material";
 
 const Javascript = () => {
   const [questions, setQuestions] = useState<IQuestion[]>([]);
 
-  useEffect(() => {
+ useEffect(() => {
     const controller = new AbortController();
     const { signal } = controller;
 
@@ -30,7 +30,7 @@ const Javascript = () => {
     <Layout title="JavaScript">
       <div className={styles.page}>
         <p className={styles.title}>Preguntas JavaScript</p>
-        <Divider style={{borderColor: "var(--secondaryNav)"}} />
+        <Divider style={{ borderColor: "var(--secondaryNav)" }} />
         <div className={styles.questions}>
           {questions.length > 0 &&
             questions.map((q, index) => (
@@ -42,6 +42,11 @@ const Javascript = () => {
                 num={index + 1}
               />
             ))}
+          {questions.length === 0 && (
+            <div className={styles.loaderContainer}>
+              <CircularProgress color="inherit" />
+            </div>
+          )}
         </div>
       </div>
     </Layout>

@@ -21,6 +21,13 @@
   flex-direction: column;
 }
 
+.loaderContainer {
+  padding-top: 24vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @media (min-width: 640px) and (max-width: 1024px) and (orientation: landscape) {
   
 }
