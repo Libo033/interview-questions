@@ -41,6 +41,7 @@ const ReactP = () => {
                 answer={q.answer}
                 num={index + 1}
                 _id={q._id}
+                lang={"React"}
               />
             ))}
           {questions.length === 0 && (

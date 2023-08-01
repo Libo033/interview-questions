@@ -41,6 +41,7 @@ const Javascript = () => {
                 answer={q.answer}
                 num={index + 1}
                 _id={q._id}
+                lang={"JavaScript"}
               />
             ))}
           {questions.length === 0 && (

@@ -15,6 +15,7 @@ export interface IQuestionBox {
   answer: string;
   num: number;
   _id: string;
+  lang: string;
 }
 
 export interface ILayoutProps {

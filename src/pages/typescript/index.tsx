@@ -41,6 +41,7 @@ const Typescript = () => {
                 answer={q.answer}
                 num={index + 1}
                 _id={q._id}
+                lang={"TypeScript"}
               />
             ))}
           {questions.length === 0 && (
