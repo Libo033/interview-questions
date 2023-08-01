@@ -82,6 +82,13 @@
   -moz-box-shadow: 3px 3px 0px 0px var(--shadow);
   box-shadow: 3px 3px 0px 0px var(--shadow);
 }
+
+.formButtonGroup {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 1.8rem;
+}
 /*#endregion */
 
 /*#region FOOTER */

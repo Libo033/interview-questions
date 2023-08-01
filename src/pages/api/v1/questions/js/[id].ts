@@ -1,5 +1,6 @@
 import clientPromise from "@/libs/connectdb";
-import { ObjectId } from "mongodb";
+import { IQuestion } from "@/libs/interfaces";
+import { ObjectId, WithId } from "mongodb";
 import type { NextApiRequest, NextApiResponse } from "next";
 
 export default async function handler(
@@ -22,9 +23,7 @@ export default async function handler(
         throw new Error("Doesn't exist this ID");
       }
 
-      const js = js_question[0];
-
-      return res.status(200).json({ js });
+      return res.status(200).json(js_question[0]);
     } catch (error: any) {
       return res.status(202).json({ error: error.message });
     }
@@ -57,12 +56,14 @@ export default async function handler(
     try {
       const client = await clientPromise;
       const db = client.db("interview_questions");
-  
-      const deleted_question = await db.collection("javascript").deleteOne({ _id: new ObjectId(id) });
-  
+
+      const deleted_question = await db
+        .collection("javascript")
+        .deleteOne({ _id: new ObjectId(id) });
+
       return res.status(200).json({ deleted: deleted_question.acknowledged });
     } catch (error: any) {
-      return res.status(500).json({ error: error.message })
+      return res.status(500).json({ error: error.message });
     }
   }
 }

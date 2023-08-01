@@ -25,7 +25,6 @@ const Dashboard = () => {
               height={120}
             />
             <div className={styles.optionsBtnGroup}>
-              <button onClick={() => handleRoute("update", "JavaScript")}>MODIFICAR</button>
               <button onClick={() => handleRoute("create", "JavaScript")}>CREAR</button>
             </div>
           </article>
@@ -38,7 +37,6 @@ const Dashboard = () => {
               height={120}
             />
             <div className={styles.optionsBtnGroup}>
-              <button onClick={() => handleRoute("update", "React")}>MODIFICAR</button>
               <button onClick={() => handleRoute("create", "React")}>CREAR</button>
             </div>
           </article>
@@ -51,7 +49,6 @@ const Dashboard = () => {
               height={120}
             />
             <div className={styles.optionsBtnGroup}>
-              <button onClick={() => handleRoute("update", "TypeScript")}>MODIFICAR</button>
               <button onClick={() => handleRoute("create", "TypeScript")}>CREAR</button>
             </div>
           </article>
