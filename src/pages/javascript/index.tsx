@@ -8,7 +8,7 @@ import { CircularProgress, Divider } from "@mui/material";
 const Javascript = () => {
   const [questions, setQuestions] = useState<IQuestion[]>([]);
 
- useEffect(() => {
+  useEffect(() => {
     const controller = new AbortController();
     const { signal } = controller;
 
@@ -40,6 +40,7 @@ const Javascript = () => {
                 question={q.question}
                 answer={q.answer}
                 num={index + 1}
+                _id={q._id}
               />
             ))}
           {questions.length === 0 && (
