@@ -10,10 +10,22 @@ import LoginForm from "@/components/LoginForm";
 import IDrawer from "@/components/IDrawer";
 import Navbar from "@/components/Navbar";
 
+global.fetch = jest.fn(
+  (): Promise<any> =>
+    Promise.resolve({
+      json: () => Promise.resolve({ _id: "", question: "", answer: "" }),
+    })
+);
+
 describe("COMPONENTES", () => {
   describe("CREATE FORM", () => {
     it("Deberia contener un titulo y un boton", () => {
-      render(<CreateForm theme={"ligth"} lang={"JavaScript"} />);
+      const router = createMockRouter({ pathname: "/" });
+      render(
+        <RouterContext.Provider value={router}>
+          <CreateForm theme={"ligth"} lang={"JavaScript"} />
+        </RouterContext.Provider>
+      );
 
       expect(
         screen.getByText(/crear nueva pregunta de javascript/i)
@@ -134,13 +146,23 @@ describe("COMPONENTES", () => {
 
   describe("LOGIN FORM", () => {
     it("Deberia tener el texto de bienvenido", () => {
-      render(<LoginForm theme={"ligth"} />);
+      const router = createMockRouter({ pathname: "/" });
+      render(
+        <RouterContext.Provider value={router}>
+          <LoginForm theme={"ligth"} />
+        </RouterContext.Provider>
+      );
 
       expect(screen.getByText(/Ingresar al dashboard/i)).toBeInTheDocument();
     });
 
     it("Deberia tener un boton de ingresar", () => {
-      render(<LoginForm theme={"ligth"} />);
+      const router = createMockRouter({ pathname: "/" });
+      render(
+        <RouterContext.Provider value={router}>
+          <LoginForm theme={"ligth"} />
+        </RouterContext.Provider>
+      );
 
       expect(screen.getByRole("button", { name: /login/i }));
     });
@@ -225,13 +247,18 @@ describe("COMPONENTES", () => {
 
   describe("QUESTION BOX", () => {
     it("Deberia tener la pregunta y la respuesta", () => {
+      const router = createMockRouter({ pathname: "/" });
       render(
-        <QuestionBox
-          theme={"ligth"}
-          question={"Que es JavaScript?"}
-          answer={"JavaScript es un lenguaje de programacion"}
-          num={3}
-        />
+        <RouterContext.Provider value={router}>
+          <QuestionBox
+            theme={"ligth"}
+            question={"Que es JavaScript?"}
+            answer={"JavaScript es un lenguaje de programacion"}
+            num={3}
+            _id={"123456789"}
+            lang={"JavaScript"}
+          />
+        </RouterContext.Provider>
       );
 
       expect(screen.getByText(/que es javascript\?/i)).toBeInTheDocument();
@@ -241,13 +268,18 @@ describe("COMPONENTES", () => {
     });
 
     it("Deberia tener el numero de la pregunta", () => {
+      const router = createMockRouter({ pathname: "/" });
       render(
-        <QuestionBox
-          theme={"ligth"}
-          question={"Que es JavaScript?"}
-          answer={"JavaScript es un lenguaje de programacion"}
-          num={3}
-        />
+        <RouterContext.Provider value={router}>
+          <QuestionBox
+            theme={"ligth"}
+            question={"Que es JavaScript?"}
+            answer={"JavaScript es un lenguaje de programacion"}
+            num={3}
+            _id={"123456789"}
+            lang={"JavaScript"}
+          />
+        </RouterContext.Provider>
       );
 
       expect(screen.getByText(/3/i)).toBeInTheDocument();
@@ -256,7 +288,12 @@ describe("COMPONENTES", () => {
 
   describe("UPDATE FORM", () => {
     it("Deberia contener un titulo y un boton", () => {
-      render(<UpdateForm theme={"ligth"} lang={"TypeScript"} />);
+      const router = createMockRouter({ pathname: "/" });
+      render(
+        <RouterContext.Provider value={router}>
+          <UpdateForm theme={"ligth"} lang={"TypeScript"} />
+        </RouterContext.Provider>
+      );
 
       expect(
         screen.getByText(/modificar pregunta de typescript/i)

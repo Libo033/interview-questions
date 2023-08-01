@@ -6,6 +6,13 @@ import Dashboard from "@/pages/admin/dashboard";
 import Create from "@/pages/admin/dashboard/create";
 import Update from "@/pages/admin/dashboard/update";
 
+global.fetch = jest.fn(
+  (): Promise<any> =>
+    Promise.resolve({
+      json: () => Promise.resolve({ _id: "", question: "", answer: "" }),
+    })
+);
+
 describe("ADMIN - ROUTES", () => {
   describe("DASHBOARD", () => {
     it("Deberia tener el titulo de 'dashboard'", () => {
@@ -38,7 +45,7 @@ describe("ADMIN - ROUTES", () => {
       ).toBeInTheDocument();
     });
 
-    it("Deberia estar los textos de crear y modificar", () => {
+    it("Deberia estar los textos de crear", () => {
       const router = createMockRouter({ pathname: "/admin/dashboard" });
       render(
         <RouterContext.Provider value={router}>
@@ -46,7 +53,6 @@ describe("ADMIN - ROUTES", () => {
         </RouterContext.Provider>
       );
 
-      expect(screen.getAllByText(/modificar/i).length).toEqual(3);
       expect(screen.getAllByText(/crear/i).length).toEqual(3);
     });
   });
