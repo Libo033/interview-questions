@@ -64,7 +64,10 @@ const UpdateForm: React.FC<IForm> = (props) => {
       .then((data) => {
         setQuestion(data.question);
         setAnswer(data.answer);
-      });
+      })
+      .catch((error) => {
+        router.push("/admin/dashboard")
+      })
   }, []);
 
   return (
