@@ -35,67 +35,6 @@ export default function Home() {
             height={120}
           />
         </div>
-        <Divider className={styles.divider} />
-        <div className={styles.container}>
-          <div className={styles.destacadas}>
-            <p className={styles.titleQuestion}>
-              Preguntas destacadas JavaScript:
-            </p>
-            <div className={styles.chips}>
-              <Link className={styles.chip} href="/javascript/#">
-                ¿Que es JavaScript?
-              </Link>
-              <Link className={styles.chip} href="/javascript/#">
-                ¿Que es DOM?
-              </Link>
-              <Link className={styles.chip} href="/javascript/#">
-                ¿Que es AJAX?
-              </Link>
-            </div>
-          </div>
-          <div className={styles.destacadas}>
-            <p className={styles.titleQuestion}>Preguntas destacadas React:</p>
-            <div className={styles.chips}>
-              <Link className={styles.chip} href="/react/#">
-                ¿Que es React?
-              </Link>
-              <Link className={styles.chip} href="/react/#">
-                ¿Que es JSX?
-              </Link>
-              <Link className={styles.chip} href="/react/#">
-                ¿Que son los hooks?
-              </Link>
-              <Link className={styles.chip} href="/react/#">
-                ¿Que es React DOM?
-              </Link>
-              <Link className={styles.chip} href="/react/#">
-                useMemo & useCallback
-              </Link>
-              <Link className={styles.chip} href="/react/#">
-                ¿Que es la hidratacion y como funciona?
-              </Link>
-            </div>
-          </div>
-          <div className={styles.destacadas}>
-            <p className={styles.titleQuestion}>
-              Preguntas destacadas TypeScript:
-            </p>
-            <div className={styles.chips}>
-              <Link className={styles.chip} href="/typescript/#">
-                ¿Que es TypeScript?
-              </Link>
-              <Link className={styles.chip} href="/typescript/#">
-                ¿Que es una interface?
-              </Link>
-              <Link className={styles.chip} href="/typescript/#">
-                ¿Que es un type?
-              </Link>
-              <Link className={styles.chip} href="/typescript/#">
-                Herencia
-              </Link>
-            </div>
-          </div>
-        </div>
       </div>
     </Layout>
   );

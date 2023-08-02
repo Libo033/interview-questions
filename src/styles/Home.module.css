@@ -3,7 +3,7 @@
 }
 
 .title {
-  height: 21vh;
+  height: 25vh;
   padding-top: 12vh;
   color: var(--foreground);
   font-size: 2.1em;
@@ -12,7 +12,7 @@
 }
 
 .description {
-  height: 24vh;
+  height: 25vh;
   font-size: 1.2em;
   text-align: justify;
   color: var(--foreground);
@@ -21,51 +21,10 @@
 }
 
 .langs {
-  height: 39vh;
+  height: 40vh;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-}
-
-.container {
-  margin-top: 4.5vh;
-  padding-block: 3vh;
-  height: fit-content;
-}
-
-.destacadas {
-  margin-bottom: 6vh;
-}
-
-.titleQuestion {
-  margin-bottom: 1.8vh;
-  color: var(--foreground-secondary);
-  font-weight: 600;
-}
-
-.chips {
-  display: flex;
-  gap: 1.2rem;
-  flex-wrap: wrap;
-}
-
-.chip {
-  padding-inline: 0.9rem;
-  height: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.81em;
-  text-decoration: none;
-  border-radius: 15px;
-  border: 1px solid gainsboro;
-  color: #f9f9f9;
-  font-weight: 600;
-  background-color: var(--chip);
-}
-
-.divider {
-  border-color: #73b4c351;
 }
 
 @media (min-width: 640px) and (max-width: 1024px) and (orientation: landscape) {
@@ -86,10 +45,6 @@
   .description {
     height: 45vh;
   }
-  
-  .container {
-    margin-top: 9vh;
-  }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -98,7 +53,7 @@
   }
   
   .langs {
-    height: 27vh;
+    height: 40vh;
   }
 }
 

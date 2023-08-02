@@ -11,7 +11,7 @@ const QuestionBox: React.FC<IQuestionBox> = (props) => {
   }
 
   return (
-    <div className={styles.questionBox} onDoubleClick={() => handleRoute()}>
+    <div id={props.num.toString()} className={styles.questionBox} onDoubleClick={() => handleRoute()}>
       <p className={styles.question}>
         {props.num} - {props.question}
       </p>
